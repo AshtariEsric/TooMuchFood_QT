@@ -1032,7 +1032,27 @@ release\informationen.obj: ..\TooMuchFood\informationen.cpp ../TooMuchFood/infor
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qfiledevice.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qvector2d.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtouchdevice.h \
-		ui_informationen.h
+		ui_informationen.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QVariant \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QApplication \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qapplication.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreapplication.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qeventloop.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qguiapplication.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qinputmethod.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QDialogButtonBox \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qdialogbuttonbox.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QTextBrowser \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtextbrowser.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 
