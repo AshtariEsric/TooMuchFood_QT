@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "gameplay.h"
 #include "informationen.h"
+#include "highscore.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -34,4 +35,11 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_btn_end_clicked()
 {
     close();
+}
+
+void MainWindow::on_btn_highscore_clicked()
+{
+    Highscore highscore;
+    highscore.setModal(true);
+    highscore.exec();
 }

@@ -29,6 +29,7 @@ public:
     QPushButton *btn_start;
     QPushButton *btn_end;
     QPushButton *pushButton;
+    QPushButton *btn_highscore;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -54,7 +55,10 @@ public:
         btn_end->setGeometry(QRect(400, 250, 80, 21));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(130, 250, 91, 21));
+        pushButton->setGeometry(QRect(260, 250, 91, 21));
+        btn_highscore = new QPushButton(centralWidget);
+        btn_highscore->setObjectName(QStringLiteral("btn_highscore"));
+        btn_highscore->setGeometry(QRect(120, 250, 80, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -75,7 +79,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Start Fenster", nullptr));
         textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -94,6 +98,7 @@ public:
         btn_start->setText(QApplication::translate("MainWindow", "Starte Spiel!", nullptr));
         btn_end->setText(QApplication::translate("MainWindow", "Beenden", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "Infos zum Spiel", nullptr));
+        btn_highscore->setText(QApplication::translate("MainWindow", "Highscore", nullptr));
     } // retranslateUi
 
 };

@@ -26,17 +26,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     gameplay.cpp \
-    informationen.cpp
+    informationen.cpp \
+    highscore.cpp
 
 HEADERS += \
         mainwindow.h \
     gameplay.h \
-    informationen.h
+    informationen.h \
+    highscore.h
 
 FORMS += \
         mainwindow.ui \
     gameplay.ui \
-    informationen.ui
+    informationen.ui \
+    highscore.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

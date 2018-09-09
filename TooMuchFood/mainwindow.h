@@ -22,6 +22,8 @@ private slots:
 
     void on_btn_end_clicked();
 
+    void on_btn_highscore_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

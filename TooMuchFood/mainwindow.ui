@@ -12,7 +12,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Start Fenster</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTextBrowser" name="textBrowser">
@@ -75,7 +75,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>130</x>
+      <x>260</x>
       <y>250</y>
       <width>91</width>
       <height>21</height>
@@ -83,6 +83,19 @@ p, li { white-space: pre-wrap; }
     </property>
     <property name="text">
      <string>Infos zum Spiel</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_highscore">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>250</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Highscore</string>
     </property>
    </widget>
   </widget>
