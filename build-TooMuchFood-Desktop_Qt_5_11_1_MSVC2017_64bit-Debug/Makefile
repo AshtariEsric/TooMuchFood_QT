@@ -236,6 +236,7 @@ Makefile: ..\TooMuchFood\TooMuchFood.pro C:\ProgramFiles(x86)\QT\5.11.1\msvc2017
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\qt_config.prf \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\exclusive_builds.prf \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\common\msvc-version.conf \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\toolchain.prf \
@@ -426,6 +427,7 @@ C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\qt_functions.prf:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\qt_config.prf:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\exclusive_builds.prf:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\common\msvc-version.conf:
 C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\mkspecs\features\toolchain.prf:
