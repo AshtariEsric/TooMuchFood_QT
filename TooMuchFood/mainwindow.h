@@ -16,13 +16,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_btn_start_clicked();
-
     void on_pushButton_clicked();
 
     void on_btn_end_clicked();
 
     void on_btn_highscore_clicked();
+
+    void on_btn_start_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -25,19 +25,16 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    gameplay.cpp \
     informationen.cpp \
     highscore.cpp
 
 HEADERS += \
         mainwindow.h \
-    gameplay.h \
     informationen.h \
     highscore.h
 
 FORMS += \
         mainwindow.ui \
-    gameplay.ui \
     informationen.ui \
     highscore.ui
 
@@ -45,3 +42,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    Gameplay.qml
