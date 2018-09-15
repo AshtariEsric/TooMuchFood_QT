@@ -733,7 +733,49 @@ debug/mainwindow.o: ../TooMuchFood/mainwindow.cpp ../TooMuchFood/mainwindow.h \
 		../TooMuchFood/informationen.h \
 		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtWidgets/QDialog \
 		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtWidgets/qdialog.h \
-		../TooMuchFood/highscore.h
+		../TooMuchFood/highscore.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/QQuickView \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qquickview.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qquickwindow.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qtquickglobal.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qtqmlglobal.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qtqml-config.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtNetwork/qtnetworkglobal.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtNetwork/qtnetwork-config.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qtquick-config.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qsgrendererinterface.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qsgnode.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQuick/qsggeometry.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qopengl.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/qt_windows.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtANGLE/GLES3/gl3.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtANGLE/GLES3/gl3platform.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtANGLE/KHR/khrplatform.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtANGLE/GLES2/gl2.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtANGLE/GLES2/gl2platform.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qopengles2ext.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qopenglext.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/QRectF \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/QMatrix4x4 \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qmatrix4x4.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qvector3d.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qvector4d.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qquaternion.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qgenericmatrix.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qwindow.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/QObject \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/QEvent \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/QMargins \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/QRect \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qsurface.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtGui/qsurfaceformat.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqml.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqmlprivate.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqmlparserstatus.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqmlpropertyvaluesource.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqmllist.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtCore/qmetaobject.h \
+		C:/ProgramFiles(x86)/v-play/V-Play/mingw_32/include/QtQml/qqmldebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\TooMuchFood\mainwindow.cpp
 
 debug/informationen.o: ../TooMuchFood/informationen.cpp ../TooMuchFood/informationen.h \

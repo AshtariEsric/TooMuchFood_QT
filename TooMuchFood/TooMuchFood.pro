@@ -26,22 +26,24 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     informationen.cpp \
-    highscore.cpp
+    highscore.cpp \
+    gameplay.cpp
 
 HEADERS += \
         mainwindow.h \
     informationen.h \
-    highscore.h
+    highscore.h \
+    gameplay.h
 
 FORMS += \
         mainwindow.ui \
     informationen.ui \
-    highscore.ui
+    highscore.ui \
+    gameplay.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES += \
-    Gameplay.qml
+DISTFILES +=

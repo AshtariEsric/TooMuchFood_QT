@@ -39,7 +39,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->setEnabled(true);
+        MainWindow->resize(625, 367);
         MainWindow->setMinimumSize(QSize(625, 367));
+#ifndef QT_NO_STATUSTIP
+        MainWindow->setStatusTip(QStringLiteral(""));
+#endif // QT_NO_STATUSTIP
+#ifndef QT_NO_WHATSTHIS
+        MainWindow->setWhatsThis(QStringLiteral(""));
+#endif // QT_NO_WHATSTHIS
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         textBrowser = new QTextBrowser(centralWidget);
@@ -79,7 +86,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Start Fenster", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Too much Food", nullptr));
         textBrowser->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

@@ -12,23 +12,48 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QOpenGLWidget>
+#include <QtWidgets/QGraphicsView>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Gameplay
 {
 public:
-    QOpenGLWidget *openGLWidget;
+    QGraphicsView *graphicsView;
 
     void setupUi(QDialog *Gameplay)
     {
         if (Gameplay->objectName().isEmpty())
             Gameplay->setObjectName(QStringLiteral("Gameplay"));
-        Gameplay->resize(400, 300);
-        openGLWidget = new QOpenGLWidget(Gameplay);
-        openGLWidget->setObjectName(QStringLiteral("openGLWidget"));
-        openGLWidget->setGeometry(QRect(40, 30, 300, 200));
+        Gameplay->setEnabled(true);
+        Gameplay->resize(600, 500);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(Gameplay->sizePolicy().hasHeightForWidth());
+        Gameplay->setSizePolicy(sizePolicy);
+        Gameplay->setContextMenuPolicy(Qt::NoContextMenu);
+        Gameplay->setWindowTitle(QStringLiteral("Gameplay"));
+#ifndef QT_NO_TOOLTIP
+        Gameplay->setToolTip(QStringLiteral(""));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_STATUSTIP
+        Gameplay->setStatusTip(QStringLiteral(""));
+#endif // QT_NO_STATUSTIP
+#ifndef QT_NO_WHATSTHIS
+        Gameplay->setWhatsThis(QStringLiteral(""));
+#endif // QT_NO_WHATSTHIS
+#ifndef QT_NO_ACCESSIBILITY
+        Gameplay->setAccessibleName(QStringLiteral(""));
+#endif // QT_NO_ACCESSIBILITY
+#ifndef QT_NO_ACCESSIBILITY
+        Gameplay->setAccessibleDescription(QStringLiteral(""));
+#endif // QT_NO_ACCESSIBILITY
+        Gameplay->setSizeGripEnabled(false);
+        Gameplay->setModal(false);
+        graphicsView = new QGraphicsView(Gameplay);
+        graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setGeometry(QRect(10, 10, 580, 480));
 
         retranslateUi(Gameplay);
 
@@ -37,7 +62,7 @@ public:
 
     void retranslateUi(QDialog *Gameplay)
     {
-        Gameplay->setWindowTitle(QApplication::translate("Gameplay", "Too much Food", nullptr));
+        Q_UNUSED(Gameplay);
     } // retranslateUi
 
 };
