@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QListView>
 
 QT_BEGIN_NAMESPACE
 
@@ -20,6 +21,7 @@ class Ui_Highscore
 {
 public:
     QDialogButtonBox *buttonBox;
+    QListView *listView;
 
     void setupUi(QDialog *Highscore)
     {
@@ -31,6 +33,9 @@ public:
         buttonBox->setGeometry(QRect(30, 240, 341, 32));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        listView = new QListView(Highscore);
+        listView->setObjectName(QStringLiteral("listView"));
+        listView->setGeometry(QRect(10, 10, 361, 231));
 
         retranslateUi(Highscore);
         QObject::connect(buttonBox, SIGNAL(accepted()), Highscore, SLOT(accept()));
