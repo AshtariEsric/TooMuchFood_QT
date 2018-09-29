@@ -25,7 +25,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
 }
 
     //Keyboard movement action
-    void movements::keyPressEvent(QKeyEvent *event)
+    void Movements::keyPressEvent(QKeyEvent *event)
     {
     if(event->key() == Qt::Key_Down && johnsBody->getDirection() != "UP"){
         direction = "DOWN";
