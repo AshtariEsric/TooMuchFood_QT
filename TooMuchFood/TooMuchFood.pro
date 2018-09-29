@@ -27,13 +27,15 @@ SOURCES += \
         mainwindow.cpp \
     informationen.cpp \
     highscore.cpp \
-    gameplay.cpp
+    gameplay.cpp \
+    movements.cpp
 
 HEADERS += \
         mainwindow.h \
     informationen.h \
     highscore.h \
-    gameplay.h
+    gameplay.h \
+    movements.h
 
 FORMS += \
         mainwindow.ui \
