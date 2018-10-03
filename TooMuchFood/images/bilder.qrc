@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images/burger">
+        <file>burger.png</file>
+    </qresource>
+</RCC>

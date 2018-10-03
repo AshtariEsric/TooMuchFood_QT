@@ -1,5 +1,8 @@
 #include "gameplay.h"
 #include "ui_gameplay.h"
+#include <QApplication>
+#include <QtWidgets>
+#include "john.h"
 
 Gameplay::Gameplay(QWidget *parent) : QGraphicsView(parent),ui(new Ui::Gameplay)
 {
@@ -18,17 +21,18 @@ Gameplay::Gameplay(QWidget *parent) : QGraphicsView(parent),ui(new Ui::Gameplay)
 
     //Add Playground to View
     setScene(gameScene);
-    /*score = new Score();
+    score = new Score();
     gameScene->addItem(score);
     john2 = NULL;
     john = NULL;
-    */
+
 
 }
 
 void Gameplay::keyPressEvent(QKeyEvent *event)
 {
-    if(john){
+    if(john)
+    {
         john->keyPressEvent(event);
     }else{
         QGraphicsView::keyPressEvent(event);
@@ -55,8 +59,3 @@ void Gameplay::gameOver(){
     gameScene->removeItem(John);
 }
 
-
-Gameplay::~Gameplay()
-{
-    delete ui;
-}

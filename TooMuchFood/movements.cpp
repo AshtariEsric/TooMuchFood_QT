@@ -2,11 +2,14 @@
 #include <QTimer>
 #include <QDebug>
 #include <QFont>
+#include <QGraphicsRectItem>
+#include "john.h"
 
-Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
+
+Movements::Movements(QGraphicsItem *parent)
 {
-       johnsBody = new JohnPart(this);
-       johnsBody->SetForward(NULL);
+       johnsBody = new johnPart(this);
+       johnsBody->setForward(NULL);
        johnsBody->setBackward(NULL);
        johnsBody->setPos(50,100);
        johnsBody->setDirection("RIGHT");
@@ -24,7 +27,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
 
 }
 
-    //Keyboard movement action
+//Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
     if(event->key() == Qt::Key_Down && johnsBody->getDirection() != "UP"){
@@ -42,25 +45,23 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
             t-start(90);
             text->setVisible(false);
                         }
-
-
     }
     }
 
-    void movements::move();
+    void Movements::move()
     {
     johnsBody->setDirection(direction);
     movements();
     }
-
-    void movements::makeFood()
+//Food Spawn
+    void Movements::makeFood()
     {
         food*f1= new food(this);
         f1->setX(qrand());
         f1->setY(qrand());
     }
 
-    void movements::makeFood2(){
+    void Movements::makeFood2(){
         food*f1 = new food(this);
         f1->setX(qrand());
         f1->setY(qrand());

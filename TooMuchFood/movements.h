@@ -3,6 +3,7 @@
 
 #include <QGraphicsItem>
 #include <QKeyEvent>
+#include <john.h>
 
 class Movements : public QGraphicsItem
 {
@@ -14,12 +15,14 @@ public:
    void makeBoard();
    void moveJohn();
 
+public slots:
    void move();
    void makeFood();
    void makeFood2();
 
 private:
-
+   John *johnsBody;
+   John *johnPart;
    QString direction;
    QTimer *t;
    QTimer *foodTimer;

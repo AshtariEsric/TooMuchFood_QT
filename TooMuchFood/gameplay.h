@@ -4,6 +4,9 @@
 #include <QGraphicsView>
 #include <QKeyEvent>
 #include <QGraphicsRectItem>
+#include <QApplication>
+#include "movements.h"
+#include "score.h"
 
 
 namespace Ui {
@@ -12,15 +15,14 @@ class Gameplay;
 
 class Gameplay : public QGraphicsView
 {
-    Q_OBJECT
 
 public:
     explicit Gameplay(QWidget *parent = 0);
     void keyPressEvent(QKeyEvent *event);
-    //Score *score;
+    Score *score;
     QGraphicsScene *gameScene;
-    //MoveJohn *john;
-    //MoveJohn *john2;
+    moveJohn *john;
+    moveJohn *john2;
     void gameOver();
 
 private:
