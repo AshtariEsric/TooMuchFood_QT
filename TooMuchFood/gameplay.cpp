@@ -11,28 +11,27 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     gameScene = new QGraphicsScene(this);
     gameScene->setSceneRect(0,0,600,500);
     QGraphicsPixmapItem *bg = new QGraphicsPixmapItem();
-    bg->setPixmap(QPixmap(/*":/images/bg.png"*/).scaled(600,500));
+    bg->setPixmap(QPixmap(":/images/bg.png").scaled(600,500));
     gameScene->addItem(bg);
 
-    //Add Playground to View
+    //Add Playground + score to View
     setScene(gameScene);
     score = new Score();
     gameScene->addItem(score);
-    john2 = NULL;
-    john = NULL;
-
+    moveJohn = NULL;
 
 }
 
-void Gameplay::keyPressEvent(QKeyEvent *event)
+/*void Gameplay::keyPressEvent(QKeyEvent *event)
 {
-    if(john)
+    if(moveJohn)
     {
-        john->keyPressEvent(event);
+        moveJohn->keyPressEvent(event);
     }else{
         QGraphicsView::keyPressEvent(event);
     }
 }
+*/
 
 void Gameplay::displayMainMenu(QString title, QString play)
 {
@@ -65,22 +64,23 @@ void Gameplay::displayMainMenu(QString title, QString play)
 
 void Gameplay::start(){
 
-    john = new moveJohn();
-    john->setFlag(QGraphicsItem::ItemIsFocusable);
-    john->setFocus();
+    moveJohn = new John();
+    moveJohn->setFlag(QGraphicsItem::ItemIsFocusable);
+    moveJohn->setFocus();
     score->setVisible(true);
     score->setScore(0);
-    gameScene->addItem(john);
-    if(john2){
-        john2->deleteLater();
-        john2 = john;
-    }
+    gameScene->addItem(moveJohn);
+
+   /* if(moveJohn2){
+        moveJohn2->deleteLater();
+        moveJohn2 = moveJohn;
+    }*/
 
 }
 
 void Gameplay::gameOver()
 {
     displayMainMenu("Game Over!", "Try Again.");
-    gameScene->removeItem(john);
+   // gameScene->removeItem(John);
 }
 

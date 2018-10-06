@@ -22,11 +22,10 @@ public slots:
 
 private:
    John *johnsBody;
-   John *johnPart;
    QString direction;
    QTimer *t;
-   QTimer *foodTimer;
-   QTimer *foodTimer2;
+   QTimer *moveTillBurgerDigested;
+   QTimer *moveTillFriesDigested;
    QGraphicsTextItem *text;
 
 

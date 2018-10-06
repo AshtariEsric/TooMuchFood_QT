@@ -5,7 +5,6 @@
 #include <QGraphicsRectItem>
 #include "john.h"
 #include "food.h"
-#include "gameplay.h"
 
 Movements::Movements(QGraphicsItem *parent)
 {
@@ -18,17 +17,17 @@ Movements::Movements(QGraphicsItem *parent)
        johnsBody->setImage();
 
        t = new QTimer();
-       //connect(t.SIGNAL(timeout()),this,SLOT(makeFood2));
+  //  connect(t.SIGNAL(timeout()),this,SLOT(makeFood2));
 
-       moveTillBurgerDigested = new QTimer();
-        //connect(moveTillBurgerDigested, SIGNAL(timeout()),this,SLOT(move()));
+       foodTimer = new QTimer();
+    //   connect(foodTimer, SIGNAL(timeout()),this,SLOT(move()));
 
-       moveTillFriesDigested = new QTimer();
-        //connect(moveTillFriesDigested,SIGNAL(timeout()),this,SLOT(makeFood2()));
+       foodTimer2 = new QTimer();
+//       connect(foodTimer2,SIGNAL(timeout()),this,SLOT(makeFood2()));
 
 }
 
-    //Keyboard movement action
+//Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
     if(event->key() == Qt::Key_Down && johnsBody->getDirection() != "UP"){
@@ -40,19 +39,12 @@ Movements::Movements(QGraphicsItem *parent)
     }else if(event->key() ==Qt::Key_Left && johnsBody->getDirection() != "RIGHT"){
         direction = "left";
     }else if(event->key() ==Qt::Key_Space){
-        if(t->isActive())
-        {
-            moveTillBurgerDigested->stop();
-            moveTillFriesDigested->stop();
-           // start(90);
+        if(t->isActive()){
+            foodTimer->stop();
+            foodTimer2->stop();
+         //   t-start(90);
             text->setVisible(false);
-        }else
-        {
-            moveTillBurgerDigested->start(3000);
-            moveTillFriesDigested->start(7000);
-           // start(90);
-            text->setVisible(false);
-        }
+                        }
     }
     }
 

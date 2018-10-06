@@ -4,11 +4,11 @@
 #include <QGraphicsView>
 #include <QKeyEvent>
 #include <QGraphicsRectItem>
-#include <QApplication>
-#include <QDialog>
+#include <QGraphicsScene>
 #include "movements.h"
 #include "score.h"
-#include "john.h"
+#include "button.h"
+
 
 class Gameplay:public QGraphicsView
 {
@@ -18,9 +18,14 @@ public:
     void keyPressEvent(QKeyEvent *event);
     Score *score;
     QGraphicsScene *gameScene;
-    /*moveJohn* john;
-    moveJohn* john2;*/
+    John *moveJohn;
+
+
+    void displayMainMenu(QString title, QString play);
+    QGraphicsTextItem *titleText;
+    Button *b;
     void gameOver();
+
 
 public slots:
     void start();

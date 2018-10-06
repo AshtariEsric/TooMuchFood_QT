@@ -23,8 +23,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
+    main.cpp \
+    mainwindow.cpp \
     informationen.cpp \
     highscore.cpp \
     gameplay.cpp \
@@ -32,7 +32,26 @@ SOURCES += \
     food.cpp \
     score.cpp \
     john.cpp \
-    button.cpp
+    button.cpp \
+    food.cpp \
+    gameplay.cpp \
+    highscore.cpp \
+    informationen.cpp \
+    john.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    movements.cpp \
+    score.cpp \
+    button.cpp \
+    food.cpp \
+    gameplay.cpp \
+    highscore.cpp \
+    informationen.cpp \
+    john.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    movements.cpp \
+    score.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,13 +62,34 @@ HEADERS += \
     food.h \
     score.h \
     john.h \
-    button.h
+    button.h \
+    button.h \
+    food.h \
+    gameplay.h \
+    highscore.h \
+    informationen.h \
+    john.h \
+    mainwindow.h \
+    movements.h \
+    score.h \
+    button.h \
+    food.h \
+    gameplay.h \
+    highscore.h \
+    informationen.h \
+    john.h \
+    mainwindow.h \
+    movements.h \
+    score.h
 
 FORMS += \
         mainwindow.ui \
     informationen.ui \
     highscore.ui \
-    gameplay.ui
+    gameplay.ui \
+    gameplay.ui \
+    highscore.ui \
+    informationen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
