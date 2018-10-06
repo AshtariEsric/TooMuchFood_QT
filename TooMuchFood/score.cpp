@@ -4,6 +4,8 @@
 
 Score::Score(QGraphicsItem *parent):QGraphicsTextItem(parent)
 {
+
+    //score position
     score = 0;
 
     setPos(5,10);

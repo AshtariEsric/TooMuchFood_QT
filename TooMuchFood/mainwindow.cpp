@@ -12,12 +12,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
-
-
 void MainWindow::on_pushButton_clicked()
 {
     Informationen informationen;
@@ -40,7 +34,7 @@ void MainWindow::on_btn_highscore_clicked()
 void MainWindow::on_btn_start_clicked()
 {
     Gameplay gameplay;
-    gameplay.setModal(true);
-    gameplay.exec();
+    /*gameplay.setModal(true);
+    gameplay.exec();*/
 
 }

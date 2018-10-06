@@ -31,7 +31,8 @@ SOURCES += \
     movements.cpp \
     food.cpp \
     score.cpp \
-    john.cpp
+    john.cpp \
+    button.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,7 +42,8 @@ HEADERS += \
     movements.h \
     food.h \
     score.h \
-    john.h
+    john.h \
+    button.h
 
 FORMS += \
         mainwindow.ui \

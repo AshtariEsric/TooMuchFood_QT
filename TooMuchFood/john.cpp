@@ -7,7 +7,7 @@
 #include <QGraphicsPixmapItem>
 
 
-John::John(QGraphicsItem *parent)//:QGraphicsPixmapItem(parent)
+John::John(QGraphicsItem *parent)
 {
     setZValue(1);
 }

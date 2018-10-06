@@ -7,6 +7,7 @@
 class John: public QGraphicsRectItem
 {
 public:
+
     John(QGraphicsItem * parent = 0);
 
     John *getForward();
