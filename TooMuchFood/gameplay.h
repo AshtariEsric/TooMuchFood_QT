@@ -10,7 +10,7 @@
 #include "button.h"
 
 
-class Gameplay:public QGraphicsView
+class Gameplay: public QGraphicsView
 {
     Q_OBJECT
 public:

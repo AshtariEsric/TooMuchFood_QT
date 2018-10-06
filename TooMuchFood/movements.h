@@ -5,12 +5,12 @@
 #include <QKeyEvent>
 #include <john.h>
 
-class Movements : public QGraphicsItem
+class Movements : public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 
 public:
-   Movements(QGraphicsItem *parent = 0);
+   Movements(QGraphicsItem *parent = nullptr);
    void keyPressEvent(QKeyEvent *event);
    void makeBoard();
    void moveJohn();

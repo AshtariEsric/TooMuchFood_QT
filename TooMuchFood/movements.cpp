@@ -59,7 +59,6 @@ Movements::Movements(QGraphicsItem *parent)
     void Movements::move()
     {
     johnsBody->setDirection(direction);
-    move();
     }
 
 //Food Spawn

@@ -11,7 +11,10 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     gameScene = new QGraphicsScene(this);
     gameScene->setSceneRect(0,0,600,500);
     QGraphicsPixmapItem *bg = new QGraphicsPixmapItem();
-    bg->setPixmap(QPixmap(":/images/bg.png").scaled(600,500));
+//    QPixmap myPixmap = QPixmap("./images/bg.png").scaled(600,500);
+    QPixmap* myPixmap = new QPixmap(QPixmap("./images/bg.png").scaled(600,500));
+
+    bg->setPixmap(*myPixmap);
     gameScene->addItem(bg);
 
     //Add Playground + score to View
@@ -22,16 +25,16 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
 
 }
 
-/*void Gameplay::keyPressEvent(QKeyEvent *event)
+void Gameplay::keyPressEvent(QKeyEvent *event)
 {
     if(moveJohn)
     {
-        moveJohn->keyPressEvent(event);
+        //moveJohn->keyPressEvent(event);
     }else{
         QGraphicsView::keyPressEvent(event);
     }
 }
-*/
+
 
 void Gameplay::displayMainMenu(QString title, QString play)
 {
