@@ -28,14 +28,22 @@ SOURCES += \
     informationen.cpp \
     highscore.cpp \
     gameplay.cpp \
-    movements.cpp
+    movements.cpp \
+    food.cpp \
+    score.cpp \
+    john.cpp \
+    button.cpp
 
 HEADERS += \
         mainwindow.h \
     informationen.h \
     highscore.h \
     gameplay.h \
-    movements.h
+    movements.h \
+    food.h \
+    score.h \
+    john.h \
+    button.h
 
 FORMS += \
         mainwindow.ui \
@@ -48,4 +56,8 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    C:/Users/Ashtari/Desktop/usable pictures/burgerIcon.ico
+
+RESOURCES += \
+    images/bilder.qrc

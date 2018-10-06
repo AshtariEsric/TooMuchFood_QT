@@ -2,11 +2,14 @@
 #include <QTimer>
 #include <QDebug>
 #include <QFont>
+#include <QGraphicsRectItem>
+#include "john.h"
+#include "food.h"
 
-Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
+Movements::Movements(QGraphicsItem *parent)
 {
-       johnsBody = new JohnPart(this);
-       johnsBody->SetForward(NULL);
+       //johnsBody = new johnPart(this);
+       johnsBody->setForward(NULL);
        johnsBody->setBackward(NULL);
        johnsBody->setPos(50,100);
        johnsBody->setDirection("RIGHT");
@@ -14,17 +17,17 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
        johnsBody->setImage();
 
        t = new QTimer();
-       connect(t.SIGNAL(timeout()),this,SLOT(makeFood2));
+  //  connect(t.SIGNAL(timeout()),this,SLOT(makeFood2));
 
        foodTimer = new QTimer();
-       connect(foodTimer, SIGNAL(timeout()),this,SLOT(move()));
+    //   connect(foodTimer, SIGNAL(timeout()),this,SLOT(move()));
 
-       food2Timer = new QTimer();
-       connect(food2Timer,SIGNAL(timeout()),this,SLOT(makeFood2()));
+       foodTimer2 = new QTimer();
+//       connect(foodTimer2,SIGNAL(timeout()),this,SLOT(makeFood2()));
 
 }
 
-    //Keyboard movement action
+//Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
     if(event->key() == Qt::Key_Down && johnsBody->getDirection() != "UP"){
@@ -39,29 +42,28 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem(parent)
         if(t->isActive()){
             foodTimer->stop();
             foodTimer2->stop();
-            t-start(90);
+         //   t-start(90);
             text->setVisible(false);
                         }
-
-
     }
     }
 
-    void movements::move();
+    void Movements::move()
     {
     johnsBody->setDirection(direction);
-    movements();
+    move();
     }
 
-    void movements::makeFood()
+//Food Spawn
+    void Movements::makeFood()
     {
-        food*f1= new food(this);
+        Food*f1= new Food(this);
         f1->setX(qrand());
         f1->setY(qrand());
     }
 
-    void movements::makeFood2(){
-        food*f1 = new food(this);
+    void Movements::makeFood2(){
+        Food*f1 = new Food(this);
         f1->setX(qrand());
         f1->setY(qrand());
     }

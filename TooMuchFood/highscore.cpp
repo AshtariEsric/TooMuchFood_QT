@@ -6,6 +6,7 @@ Highscore::Highscore(QWidget *parent) :
     ui(new Ui::Highscore)
 {
     ui->setupUi(this);
+
 }
 
 Highscore::~Highscore()

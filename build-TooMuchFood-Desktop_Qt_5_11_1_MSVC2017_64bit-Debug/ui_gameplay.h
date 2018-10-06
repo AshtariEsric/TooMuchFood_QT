@@ -19,7 +19,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Gameplay
 {
 public:
-    QGraphicsView *graphicsView;
+    QGraphicsView *gameScene;
 
     void setupUi(QDialog *Gameplay)
     {
@@ -51,11 +51,12 @@ public:
 #endif // QT_NO_ACCESSIBILITY
         Gameplay->setSizeGripEnabled(false);
         Gameplay->setModal(false);
-        graphicsView = new QGraphicsView(Gameplay);
-        graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(10, 10, 580, 480));
+        gameScene = new QGraphicsView(Gameplay);
+        gameScene->setObjectName(QStringLiteral("gameScene"));
+        gameScene->setGeometry(QRect(10, 10, 580, 480));
 
         retranslateUi(Gameplay);
+        QObject::connect(gameScene, SIGNAL(rubberBandChanged(QRect,QPointF,QPointF)), gameScene, SLOT(invalidateScene()));
 
         QMetaObject::connectSlotsByName(Gameplay);
     } // setupUi
