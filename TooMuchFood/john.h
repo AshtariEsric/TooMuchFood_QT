@@ -4,7 +4,7 @@
 #include <QGraphicsRectItem>
 
 
-class John: public QGraphicsRectItem
+class John: public QGraphicsPixmapItem
 {
 public:
 
@@ -21,7 +21,6 @@ public:
 
     void move();
     void checkCollidingObjects();
-
     QString part;
     void setImage();
 

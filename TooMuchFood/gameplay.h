@@ -18,7 +18,7 @@ public:
     void keyPressEvent(QKeyEvent *event);
     Score *score;
     QGraphicsScene *gameScene;
-    John *moveJohn;
+    Movements *John;
 
 
     void displayMainMenu(QString title, QString play);

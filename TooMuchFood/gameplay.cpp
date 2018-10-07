@@ -3,33 +3,35 @@
 Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
 {
     //View creation
-    setFixedSize(600,500);
+    setFixedSize(1400,880);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     //Making Playground
     gameScene = new QGraphicsScene(this);
-    gameScene->setSceneRect(0,0,600,500);
+    gameScene->setSceneRect(0,0,1400,880);
     QGraphicsPixmapItem *bg = new QGraphicsPixmapItem();
-//    QPixmap myPixmap = QPixmap("./images/bg.png").scaled(600,500);
-    QPixmap* myPixmap = new QPixmap(QPixmap("./images/bg.png").scaled(600,500));
-
+    QPixmap* myPixmap = new QPixmap(QPixmap("./images/bg.png").scaled(1400,880));
     bg->setPixmap(*myPixmap);
     gameScene->addItem(bg);
+
+    // myPixmap->load("./images/bg.png");
+    // Load für Laden neuer lvls.
 
     //Add Playground + score to View
     setScene(gameScene);
     score = new Score();
     gameScene->addItem(score);
-    moveJohn = NULL;
+    John = NULL;
+
 
 }
 
 void Gameplay::keyPressEvent(QKeyEvent *event)
 {
-    if(moveJohn)
+    if(John)
     {
-        //moveJohn->keyPressEvent(event);
+        John->keyPressEvent(event);
     }else{
         QGraphicsView::keyPressEvent(event);
     }
@@ -43,9 +45,9 @@ void Gameplay::displayMainMenu(QString title, QString play)
     QFont titleFont("arial", 50);
     titleText->setFont (titleFont);
     int xPos = width ()/2 - titleText->boundingRect().width()/2;
-    int yPos = 150;
+    int yPos = 100;
     titleText->setPos(xPos,yPos);
-    gameScene->addItem(titleText);
+    gameScene->addItem(titleText);  
 
     //create Btn
     Button *playButton = new Button(play, titleText);
@@ -67,23 +69,19 @@ void Gameplay::displayMainMenu(QString title, QString play)
 
 void Gameplay::start(){
 
-    moveJohn = new John();
-    moveJohn->setFlag(QGraphicsItem::ItemIsFocusable);
-    moveJohn->setFocus();
+    John = new Movements();
+    John->setFlag(QGraphicsItem::ItemIsFocusable);
+    John->setFocus();
     score->setVisible(true);
     score->setScore(0);
-    gameScene->addItem(moveJohn);
-
-   /* if(moveJohn2){
-        moveJohn2->deleteLater();
-        moveJohn2 = moveJohn;
-    }*/
+    gameScene->addItem(John);
+    delete titleText;
 
 }
 
 void Gameplay::gameOver()
 {
     displayMainMenu("Game Over!", "Try Again.");
-   // gameScene->removeItem(John);
+    gameScene->removeItem(John);
 }
 

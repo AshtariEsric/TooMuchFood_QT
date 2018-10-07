@@ -9,7 +9,7 @@
 
 Movements::Movements(QGraphicsItem *parent)
 {
-       //johnsBody = new johnPart(this);
+       johnsBody = new John(this);
        johnsBody->setForward(NULL);
        johnsBody->setBackward(NULL);
        johnsBody->setPos(50,100);
@@ -74,5 +74,6 @@ Movements::Movements(QGraphicsItem *parent)
         f1->setX(qrand());
         f1->setY(qrand());
     }
+
 
 
