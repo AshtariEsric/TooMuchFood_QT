@@ -24,7 +24,6 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     gameScene->addItem(score);
     John = nullptr;
 
-
 }
 
 void Gameplay::keyPressEvent(QKeyEvent *event)

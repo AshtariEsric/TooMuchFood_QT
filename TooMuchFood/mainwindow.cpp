@@ -33,7 +33,9 @@ void MainWindow::on_btn_highscore_clicked()
 
 void MainWindow::on_btn_start_clicked()
 {
-    Gameplay* gameplay = new Gameplay();
-    gameplay->show();
+    Gameplay* playground = new Gameplay();
+    playground->show();
+    playground->displayMainMenu("Title", "Play");
+
     //gameplay.setModal(true);
 }
