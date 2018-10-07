@@ -16,15 +16,16 @@ class Gameplay: public QGraphicsView
 public:
     Gameplay(QWidget *parent = 0);
     void keyPressEvent(QKeyEvent *event);
-    Score *score;
-    QGraphicsScene *gameScene;
-    Movements *John;
-
-
     void displayMainMenu(QString title, QString play);
-    QGraphicsTextItem *titleText;
-    Button *b;
     void gameOver();
+
+
+    QGraphicsTextItem *titleText = nullptr;
+    Button *b = nullptr;
+    Score *score = nullptr;
+    QGraphicsScene *gameScene = nullptr;
+    Movements *John = nullptr;
+    QGraphicsRectItem *MenuContainer = nullptr;
 
 
 public slots:

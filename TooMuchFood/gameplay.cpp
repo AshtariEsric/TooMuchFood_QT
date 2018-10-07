@@ -24,7 +24,6 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     gameScene->addItem(score);
     John = nullptr;
 
-
 }
 
 void Gameplay::keyPressEvent(QKeyEvent *event)
@@ -40,37 +39,38 @@ void Gameplay::keyPressEvent(QKeyEvent *event)
 
 void Gameplay::displayMainMenu(QString title, QString play)
 {
-    auto* MenuContainer = new QGraphicsRectItem();
+    MenuContainer = new QGraphicsRectItem();
     const int MenuWidth = this->width()/2;
     const int leftOffset = this->width()/4;
     const int heightOffset = this->height()/4;
     MenuContainer->setRect(leftOffset,heightOffset,MenuWidth, this->height()/2);
     QBrush brush;
-    brush.setStyle(Qt::SolidPattern);
-    brush.setColor(Qt::gray);
+    brush.setStyle(Qt::NoBrush);
+    brush.setColor(Qt::transparent);
     MenuContainer->setBrush(brush);
     gameScene->addItem(MenuContainer);
 
     //title creation
-    titleText = new QGraphicsTextItem(title, MenuContainer);
+
+    /*titleText = new QGraphicsTextItem(title, MenuContainer);
     QFont titleFont("arial", 50);
     titleText->setFont (titleFont);
     int xPos = leftOffset+MenuWidth/2 - titleText->boundingRect().width()/2;
     int yPos = 100;
     titleText->setPos(xPos,yPos);
+    */
 
     //create Btn
     Button *playButton = new Button(play, MenuContainer);
     int pxPos = leftOffset+MenuWidth/2 - playButton->boundingRect().width()/2;
-    int pyPos = 150;
+    int pyPos = 300;
     playButton->setPos(pxPos,pyPos);
-
     connect(playButton, SIGNAL(clicked()), this, SLOT(start()));
 
     //create q-btn
     Button *quitButton = new Button("Quit", MenuContainer);
     int qxPos = leftOffset+MenuWidth/2 - quitButton->boundingRect().width()/2;
-    int qyPos = 200;
+    int qyPos = 350;
     quitButton->setPos(qxPos,qyPos);
     connect(quitButton, SIGNAL(clicked()),this,SLOT(close()));
 
@@ -84,7 +84,7 @@ void Gameplay::start(){
     score->setVisible(true);
     score->setScore(0);
     gameScene->addItem(John);
-    delete titleText;
+    gameScene->removeItem(MenuContainer);
 
 }
 

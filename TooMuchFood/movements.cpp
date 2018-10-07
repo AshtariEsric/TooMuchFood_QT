@@ -18,13 +18,13 @@ Movements::Movements(QGraphicsItem *parent)
        johnsBody->setImage();
 
        t = new QTimer();
-       //connect(t.SIGNAL(timeout()),this,SLOT(makeFood2));
+       connect(t,SIGNAL(timeout()),this,SLOT(makeFood2));
 
        moveTillBurgerDigested = new QTimer();
-        //connect(moveTillBurgerDigested, SIGNAL(timeout()),this,SLOT(move()));
+        connect(moveTillBurgerDigested, SIGNAL(timeout()),this,SLOT(move()));
 
        moveTillFriesDigested = new QTimer();
-        //connect(moveTillFriesDigested,SIGNAL(timeout()),this,SLOT(makeFood2()));
+        connect(moveTillFriesDigested,SIGNAL(timeout()),this,SLOT(makeFood2()));
 
 }
 
@@ -44,13 +44,13 @@ Movements::Movements(QGraphicsItem *parent)
         {
             moveTillBurgerDigested->stop();
             moveTillFriesDigested->stop();
-           // start(90);
-            text->setVisible(false);
+           t->stop();
+            text->setVisible(true);
         }else
         {
             moveTillBurgerDigested->start(3000);
             moveTillFriesDigested->start(7000);
-           // start(90);
+           t->start(90);
             text->setVisible(false);
         }
     }

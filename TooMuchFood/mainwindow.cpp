@@ -37,5 +37,4 @@ void MainWindow::on_btn_start_clicked()
     playground->show();
     playground->displayMainMenu("Title", "Play");
 
-    //gameplay.setModal(true);
 }
