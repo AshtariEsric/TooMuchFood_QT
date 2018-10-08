@@ -25,13 +25,16 @@ public:
     {
         if (Gameplay->objectName().isEmpty())
             Gameplay->setObjectName(QStringLiteral("Gameplay"));
-        Gameplay->setEnabled(true);
-        Gameplay->resize(600, 500);
-        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        Gameplay->setEnabled(false);
+        Gameplay->resize(1400, 880);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(Gameplay->sizePolicy().hasHeightForWidth());
         Gameplay->setSizePolicy(sizePolicy);
+        Gameplay->setMinimumSize(QSize(1400, 880));
+        Gameplay->setSizeIncrement(QSize(1400, 880));
+        Gameplay->setBaseSize(QSize(1400, 880));
         Gameplay->setContextMenuPolicy(Qt::NoContextMenu);
         Gameplay->setWindowTitle(QStringLiteral("Gameplay"));
 #ifndef QT_NO_TOOLTIP
@@ -53,7 +56,15 @@ public:
         Gameplay->setModal(false);
         gameScene = new QGraphicsView(Gameplay);
         gameScene->setObjectName(QStringLiteral("gameScene"));
-        gameScene->setGeometry(QRect(10, 10, 580, 480));
+        gameScene->setEnabled(false);
+        gameScene->setGeometry(QRect(20, 10, 1400, 880));
+        sizePolicy.setHeightForWidth(gameScene->sizePolicy().hasHeightForWidth());
+        gameScene->setSizePolicy(sizePolicy);
+        gameScene->setMinimumSize(QSize(1400, 880));
+        gameScene->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        gameScene->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        gameScene->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
+        gameScene->setSceneRect(QRectF(0, 0, 1400, 880));
 
         retranslateUi(Gameplay);
         QObject::connect(gameScene, SIGNAL(rubberBandChanged(QRect,QPointF,QPointF)), gameScene, SLOT(invalidateScene()));

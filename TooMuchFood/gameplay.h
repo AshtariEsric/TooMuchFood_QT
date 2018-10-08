@@ -14,7 +14,7 @@ class Gameplay: public QGraphicsView
 {
     Q_OBJECT
 public:
-    Gameplay(QWidget *parent = 0);
+    Gameplay(QWidget *parent = nullptr);
     void keyPressEvent(QKeyEvent *event);
     void displayMainMenu(QString title, QString play);
     void gameOver();
@@ -24,7 +24,8 @@ public:
     Button *b = nullptr;
     Score *score = nullptr;
     QGraphicsScene *gameScene = nullptr;
-    Movements *John = nullptr;
+    Movements *newJohn = nullptr;
+    Movements *newJohn2 = nullptr;
     QGraphicsRectItem *MenuContainer = nullptr;
 
 

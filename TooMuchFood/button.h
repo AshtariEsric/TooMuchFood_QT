@@ -18,7 +18,7 @@ signals:
     void clicked();
 
 private:
-    QGraphicsTextItem *text;
+    QGraphicsTextItem *text = nullptr;
 
 };
 

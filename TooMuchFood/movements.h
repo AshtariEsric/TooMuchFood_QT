@@ -13,7 +13,7 @@ public:
    Movements(QGraphicsItem *parent = nullptr);
    void keyPressEvent(QKeyEvent *event);
    void makeBoard();
-   void moveJohn();
+   void movementsJohn();
 
 public slots:
    void move();
@@ -21,12 +21,13 @@ public slots:
    void makeFood2();
 
 private:
-   John *johnsBody;
-   QString direction;
-   QTimer *t;
-   QTimer *moveTillBurgerDigested;
-   QTimer *moveTillFriesDigested;
-   QGraphicsTextItem *text;
+   John *johnsHead = nullptr;
+   John *johnsBody = nullptr;
+   QString direction = nullptr;
+   QTimer *t = nullptr;
+   QTimer *burgerSpawn = nullptr;
+   QTimer *frieSpawn = nullptr;
+   QGraphicsTextItem *text = nullptr;
 
 
 };

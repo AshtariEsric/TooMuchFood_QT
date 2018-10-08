@@ -4,8 +4,8 @@
 #include "gameplay.h"
 #include "food.h"
 #include <typeinfo>
-#include <QGraphicsPixmapItem>
 
+extern Gameplay *gameplay;
 
 John::John(QGraphicsItem *parent)
 {
@@ -59,7 +59,7 @@ void John::move()
         this->setX(this->x()+40);
     }
 
-    if(this->getForward()!= NULL)
+    if(this->getForward()!= nullptr)
     {
         direction = this->getForward()->direction;
     }
@@ -67,21 +67,24 @@ void John::move()
     {
         if(this->y() >= 880)
         {
-            this->setY(0);
-        }else if(this->y()<0)
-        {
-            this->setY(0);
-        }else if(this->x() <0)
-        {
-            this->setY(880);
-        }else if(this->x() >=1400)
-        {
-            this->setX(0);
-        }
+                this->setY(0);
+            }
+        else if(this->y()<0)
+            {
+                this->setY(880);
+            }
+        else if(this->x() <0)
+            {
+                this->setX(1400);
+            }
+        else if(this->x() >=1400)
+            {
+                this->setX(0);
+            }
     }
-
     first++;
-    if(part == "Head")
+
+    if(part == "HEAD")
     {
         checkCollidingObjects();
         setImage();
@@ -94,16 +97,16 @@ void John::setImage()
         {
             if(direction == "UP")
             {
-                setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
+                setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
             }else if (direction == "DOWN")
             {
-                setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
+                setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
             }else if (direction == "LEFT")
             {
-                 setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
+                 setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
             }else if (direction == "RIGHT")
             {
-                 setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
+                 setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40,Qt::KeepAspectRatio));
             }
             setZValue(2);
 
@@ -112,7 +115,34 @@ void John::setImage()
 
 void John::checkCollidingObjects()
 {
+QList <QGraphicsItem *> coll = this->collidingItems();
 
+for(int i = 0, n = coll.length(); i<n; i++)
+{
+   // food f = dynamic_cast<food *>(coll[i]);
+    /*if(f)
+    {
+        QPointF thisCenter(x()+10,y()+10);
+        QPointF foodCenter(f->x()+10,f->y()+10);
+        QLineF ln(thisCenter,foodCenter);
+        if(ln.length() == 0)
+        {
+            //add poo
+            gameplay->gameScene->removeItem(f);
+            gameplay->score->setScore(gameplay->score->getScore()+f->score);
+            delete f;
+        }
+    }
+    else if(coll[i])
+    {
+        if(typeid( *coll[i])==typeid(John))
+        {
+            gameplay->gameOver();
+        }
+        return;
+    }
+    */
+}
 
 }
 

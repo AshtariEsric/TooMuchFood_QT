@@ -8,7 +8,7 @@ class John: public QGraphicsPixmapItem
 {
 public:
 
-    John(QGraphicsItem * parent = 0);
+    John(QGraphicsItem * parent = nullptr);
 
     John *getForward();
     void setForward(John *value);
@@ -21,13 +21,14 @@ public:
 
     void move();
     void checkCollidingObjects();
-    QString part;
+
+    QString part = nullptr;
     void setImage();
 
 private:
-    John *forward;
-    John *backward;
-    QString direction;
+    John *forward = nullptr;
+    John *backward = nullptr;
+    QString direction = nullptr;
 
 };
 
