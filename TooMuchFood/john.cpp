@@ -44,7 +44,7 @@ void John::setDirection(QString value)
 
 void John::move()
 {
-   static  int first;
+   static int first;
     if (direction == "S")
     {
         this->setY(this->y()+40);
