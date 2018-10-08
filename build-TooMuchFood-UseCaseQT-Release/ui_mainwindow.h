@@ -29,7 +29,6 @@ public:
     QPushButton *btn_start;
     QPushButton *btn_end;
     QPushButton *pushButton;
-    QPushButton *btn_highscore;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -62,10 +61,7 @@ public:
         btn_end->setGeometry(QRect(400, 250, 80, 21));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(260, 250, 91, 21));
-        btn_highscore = new QPushButton(centralWidget);
-        btn_highscore->setObjectName(QStringLiteral("btn_highscore"));
-        btn_highscore->setGeometry(QRect(120, 250, 80, 21));
+        pushButton->setGeometry(QRect(260, 250, 101, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -105,7 +101,6 @@ public:
         btn_start->setText(QApplication::translate("MainWindow", "Starte Spiel!", nullptr));
         btn_end->setText(QApplication::translate("MainWindow", "Beenden", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "Infos zum Spiel", nullptr));
-        btn_highscore->setText(QApplication::translate("MainWindow", "Highscore", nullptr));
     } // retranslateUi
 
 };

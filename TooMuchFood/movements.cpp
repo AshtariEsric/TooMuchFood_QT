@@ -18,13 +18,21 @@ Movements::Movements(QGraphicsItem *parent)
        johnsBody->setImage();
 
        t = new QTimer();
-       connect(t,SIGNAL(timeout()),this,SLOT(makeFood2));
+       connect(t,SIGNAL(timeout()),this,SLOT(move));
 
        moveTillBurgerDigested = new QTimer();
-        connect(moveTillBurgerDigested, SIGNAL(timeout()),this,SLOT(move()));
+        connect(moveTillBurgerDigested, SIGNAL(timeout()),this,SLOT(makeFood()));
 
        moveTillFriesDigested = new QTimer();
-        connect(moveTillFriesDigested,SIGNAL(timeout()),this,SLOT(makeFood2()));
+       connect(moveTillFriesDigested,SIGNAL(timeout()),this,SLOT(makeFood2()));
+
+       direction ="RIGHT";
+
+       text = new QGraphicsTextItem(this);
+       text->setVisible(true);
+       text->setPlainText("Press Space to continue");
+       text->setPos(650,250);
+       text->setFont(QFont("",14));
 
 }
 
@@ -50,7 +58,7 @@ Movements::Movements(QGraphicsItem *parent)
         {
             moveTillBurgerDigested->start(3000);
             moveTillFriesDigested->start(7000);
-           t->start(90);
+            t->start(90);
             text->setVisible(false);
         }
     }

@@ -94,16 +94,16 @@ void John::setImage()
         {
             if(direction == "UP")
             {
-                //setPixmap(QPixmap(":/images/johnup.png").scaled(40,40));
+                setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
             }else if (direction == "DOWN")
             {
-                //setPixmap(QPixmap(":/images/johndown.png").scaled(40,40));
+                setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
             }else if (direction == "LEFT")
             {
-                 //setPixmap(QPixmap(":/images/johnleft.png").scaled(40,40));
+                 setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
             }else if (direction == "RIGHT")
             {
-                 //setPixmap(QPixmap(":/images/johnright.png").scaled(40,40));
+                 setPixmap(QPixmap("./images/arrow.png").scaled(40,40));
             }
             setZValue(2);
 

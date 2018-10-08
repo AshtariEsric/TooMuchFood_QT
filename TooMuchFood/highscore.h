@@ -2,6 +2,7 @@
 #define HIGHSCORE_H
 
 #include <QDialog>
+//Deaktivated
 
 namespace Ui {
 class Highscore;

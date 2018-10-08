@@ -3,5 +3,6 @@
         <file>burger.png</file>
         <file>fries.png</file>
         <file>bg.png</file>
+        <file>arrow.png</file>
     </qresource>
 </RCC>

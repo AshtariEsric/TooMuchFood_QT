@@ -90,25 +90,12 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>260</x>
       <y>250</y>
-      <width>91</width>
+      <width>101</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>Infos zum Spiel</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_highscore">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>250</y>
-      <width>80</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Highscore</string>
     </property>
    </widget>
   </widget>
