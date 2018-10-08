@@ -1,13 +1,13 @@
-#include "john.h"
+#include <typeinfo>
 #include <QBrush>
 #include <QDebug>
 #include "gameplay.h"
 #include "food.h"
-#include <typeinfo>
+#include "john.h"
 
-extern Gameplay *gameplay;
+Gameplay *gameplay;
 
-John::John(QGraphicsItem *parent)
+John::John(QGraphicsItem *parent):QGraphicsPixmapItem(parent)
 {
     setZValue(1);
 }
@@ -44,17 +44,17 @@ void John::setDirection(QString value)
 
 void John::move()
 {
-    static int first;
-    if (direction == "DOWN")
+   static  int first;
+    if (direction == "S")
     {
         this->setY(this->y()+40);
-    }else if(direction == "UP")
+    }else if(direction == "W")
     {
         this->setY(this->y()-40);
-    }else if (direction == "LEFT")
+    }else if (direction == "A")
     {
         this->setX(this->x()-40);
-    }else if(direction == "RIGHT")
+    }else if(direction == "D")
     {
         this->setX(this->x()+40);
     }
@@ -95,55 +95,60 @@ void John::setImage()
 {
     if(part == "HEAD")
         {
-            if(direction == "UP")
+            if(direction == "W")
             {
-                setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
-            }else if (direction == "DOWN")
+                setPixmap(QPixmap(":/images/burger/up.png").scaled(60,60));
+            }else if (direction == "S")
             {
-                setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
-            }else if (direction == "LEFT")
+                setPixmap(QPixmap(":/images/burger/down.png").scaled(60,60));
+            }else if (direction == "A")
             {
-                 setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40));
-            }else if (direction == "RIGHT")
+                 setPixmap(QPixmap(":/images/burger/left.png").scaled(60,60));
+            }else if (direction == "D")
             {
-                 setPixmap(QPixmap(":/images/burger/arrow.png").scaled(40,40,Qt::KeepAspectRatio));
+                 setPixmap(QPixmap(":/images/burger/right.png").scaled(60,60,Qt::KeepAspectRatio));
             }
             setZValue(2);
 
         }
 }
-
 void John::checkCollidingObjects()
 {
-QList <QGraphicsItem *> coll = this->collidingItems();
+   QList <QGraphicsItem *> coll = this->collidingItems();
+    //QList erstellt einen Array mit QGraphicItems, die Variable John treffen
 
-for(int i = 0, n = coll.length(); i<n; i++)
-{
-   // food f = dynamic_cast<food *>(coll[i]);
-    /*if(f)
-    {
-        QPointF thisCenter(x()+10,y()+10);
-        QPointF foodCenter(f->x()+10,f->y()+10);
-        QLineF ln(thisCenter,foodCenter);
-        if(ln.length() == 0)
+    for(int i = 0, n = coll.length(); i<n; i++)
+    {//i = 0 n = Häufigkeit der Kollisionen, solange i < n, i++
+        Food *f = dynamic_cast<Food *>(coll[i]);
+        //dynamic_cast da noch nicht klar ist welcher Typ Food sein wird - Food wird in coll array geschrieben
+       if(f)
         {
-            //add poo
-            gameplay->gameScene->removeItem(f);
-            gameplay->score->setScore(gameplay->score->getScore()+f->score);
-            delete f;
+            QPointF thisCenter(x()+10,y()+10);
+            QPointF foodCenter(f->x()+10,f->y()+10);
+            QLineF ln(thisCenter,foodCenter);
+            //Prüfen ob Variable John, die Variable Food trifft
+            if(ln.length() == 0)
+            {
+                //Delete Food & setScore
+                gameplay->gameScene->removeItem(f);
+                //lösche das Item (f) - Food, welches berührt wird von der gameScene
+                gameplay->score->setScore(gameplay->score->getScore()+f->score);
+                //erhöhe den Score um den (f) Wert, welcher vorab für Fries / Burger definiert wurde
+                delete f;
+                //gib den Speicher wieder frei
+            }
         }
-    }
-    else if(coll[i])
-    {
-        if(typeid( *coll[i])==typeid(John))
+
+       //else if kontrolliert wann John "sich selber" trifft. Dann ist das Spiel zuende - muss abgeändert werden auf wenn John "poo" trifft.
+            else if(coll[i])
         {
-            gameplay->gameOver();
+            if(typeid(* coll[i])==typeid(John))
+            {
+                gameplay->gameOver();
+                return;
+            }
         }
-        return;
-    }
-    */
 }
-
 }
 
 

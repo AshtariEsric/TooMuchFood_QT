@@ -285,7 +285,8 @@ release\qrc_bilder.cpp: ..\TooMuchFood\images\bilder.qrc \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\bin\rcc.exe \
 		..\TooMuchFood\images\fries.png \
 		..\TooMuchFood\images\burger.png \
-		..\TooMuchFood\images\bg.png
+		..\TooMuchFood\images\bg.png \
+		..\TooMuchFood\images\arrow.png
 	"C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\bin\rcc.exe" -name bilder ..\TooMuchFood\images\bilder.qrc -o release\qrc_bilder.cpp
 
 compiler_qmlcache_make_all:
@@ -3113,7 +3114,6 @@ release\movements.obj: ..\TooMuchFood\movements.cpp ../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QFont \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qfont.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \
@@ -3140,10 +3140,10 @@ release\movements.obj: ..\TooMuchFood\movements.cpp ../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicssceneevent.h
 
 release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig.h \
@@ -3165,6 +3165,11 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmutex.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
@@ -3190,12 +3195,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
@@ -3229,7 +3228,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h
 
@@ -3452,7 +3450,6 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsSceneMouseEvent \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicssceneevent.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem
 
 release\button.obj: ..\TooMuchFood\button.cpp ../TooMuchFood/button.h \
@@ -3551,10 +3548,10 @@ release\button.obj: ..\TooMuchFood\button.cpp ../TooMuchFood/button.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h
 
 release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig.h \
@@ -3576,6 +3573,11 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmutex.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
@@ -3601,12 +3603,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
@@ -3640,7 +3636,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h
 
@@ -4159,7 +4154,6 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsSceneMouseEvent \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicssceneevent.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem
 
 release\main.obj: ..\TooMuchFood\main.cpp ../TooMuchFood/mainwindow.h \
@@ -4568,7 +4562,6 @@ release\movements.obj: ..\TooMuchFood\movements.cpp ../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QFont \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qfont.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \
@@ -4782,10 +4775,10 @@ release\button.obj: ..\TooMuchFood\button.cpp ../TooMuchFood/button.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h
 
 release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig.h \
@@ -4807,6 +4800,11 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmutex.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
@@ -4832,12 +4830,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
@@ -4871,7 +4863,6 @@ release\food.obj: ..\TooMuchFood\food.cpp ../TooMuchFood/food.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h
 
@@ -5390,7 +5381,6 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsSceneMouseEvent \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicssceneevent.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem
 
 release\main.obj: ..\TooMuchFood\main.cpp ../TooMuchFood/mainwindow.h \
@@ -5799,7 +5789,6 @@ release\movements.obj: ..\TooMuchFood\movements.cpp ../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QFont \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qfont.h \
 		../TooMuchFood/food.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QObject \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsPixmapItem \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \

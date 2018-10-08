@@ -25,7 +25,7 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     newJohn = nullptr;
     newJohn2 = nullptr;
 
-    gameScene->addItem(newJohn);
+
 
 }
 
@@ -40,7 +40,7 @@ void Gameplay::keyPressEvent(QKeyEvent *event)
 }
 
 
-void Gameplay::displayMainMenu(QString title, QString play)
+void Gameplay::displayMainMenu(QString , QString play)
 {
     MenuContainer = new QGraphicsRectItem();
     const int MenuWidth = this->width()/2;
@@ -63,7 +63,7 @@ void Gameplay::displayMainMenu(QString title, QString play)
     titleText->setPos(xPos,yPos);
     */
 
-    //create Btn
+    //create p-Btn
     Button *playButton = new Button(play, MenuContainer);
     int pxPos = leftOffset+MenuWidth/2 - playButton->boundingRect().width()/2;
     int pyPos = 300;
@@ -82,10 +82,8 @@ void Gameplay::displayMainMenu(QString title, QString play)
 void Gameplay::start(){
 
     newJohn = new Movements();
-
     newJohn->setFlag(QGraphicsItem::ItemIsFocusable);
     newJohn->setFocus();
-    newJohn->setVisible(true);
     score->setVisible(true);
     score->setScore(0);
     gameScene->addItem(newJohn);

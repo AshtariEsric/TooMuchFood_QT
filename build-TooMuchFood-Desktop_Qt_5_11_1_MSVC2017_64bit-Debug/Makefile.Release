@@ -285,10 +285,13 @@ compiler_rcc_clean:
 	-$(DEL_FILE) release\qrc_bilder.cpp
 release\qrc_bilder.cpp: ..\TooMuchFood\images\bilder.qrc \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\bin\rcc.exe \
+		..\TooMuchFood\images\up.png \
+		..\TooMuchFood\images\down.png \
 		..\TooMuchFood\images\fries.png \
 		..\TooMuchFood\images\burger.png \
+		..\TooMuchFood\images\right.png \
 		..\TooMuchFood\images\bg.png \
-		..\TooMuchFood\images\arrow.png
+		..\TooMuchFood\images\left.png
 	"C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\bin\rcc.exe" -name bilder ..\TooMuchFood\images\bilder.qrc -o release\qrc_bilder.cpp
 
 compiler_moc_predefs_make_all: release\moc_predefs.h
@@ -3318,10 +3321,8 @@ release\score.obj: ..\TooMuchFood\score.cpp ../TooMuchFood/score.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QFont \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qfont.h
 
-release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+release\john.obj: ..\TooMuchFood\john.cpp C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
@@ -3345,74 +3346,73 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringview.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearraylist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qregexp.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringmatcher.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qset.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsview.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainter.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h \
@@ -3436,9 +3436,12 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QKeyEvent \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsScene \
 		../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
+		../TooMuchFood/john.h \
 		../TooMuchFood/score.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsTextItem \
 		../TooMuchFood/button.h \
@@ -4022,10 +4025,8 @@ release\informationen.obj: ..\TooMuchFood\informationen.cpp ../TooMuchFood/infor
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextformat.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h
 
-release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+release\john.obj: ..\TooMuchFood\john.cpp C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
@@ -4049,74 +4050,73 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringview.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearraylist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qregexp.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringmatcher.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qset.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsview.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainter.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h \
@@ -4140,9 +4140,12 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QKeyEvent \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsScene \
 		../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
+		../TooMuchFood/john.h \
 		../TooMuchFood/score.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsTextItem \
 		../TooMuchFood/button.h \
@@ -5249,10 +5252,8 @@ release\informationen.obj: ..\TooMuchFood\informationen.cpp ../TooMuchFood/infor
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextformat.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h
 
-release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+release\john.obj: ..\TooMuchFood\john.cpp C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtguiglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qglobal.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qconfig-bootstrapped.h \
@@ -5276,74 +5277,73 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnumeric.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qversiontagging.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtgui-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qnamespace.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstring.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qchar.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearray.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrefcount.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qarraydata.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringliteral.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringalgorithms.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringview.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringbuilder.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlist.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qalgorithms.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiterator.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhashfunctions.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpair.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qbytearraylist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringlist.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qregexp.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qstringmatcher.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qscopedpointer.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobjectdefs_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcoreevent.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmetatype.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qobject_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qiodevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qshareddata.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvector.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qpoint.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qhash.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdebug.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmap.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qtextstream.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qlocale.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qvariant.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qset.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qcontiguouscache.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qrect.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qmargins.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qsize.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainterpath.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qmatrix.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpolygon.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qregion.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qwindowdefs_win.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qdatastream.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\qline.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixmap.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpaintdevice.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qcolor.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgb.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qrgba64.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qimage.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpixelformat.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtransform.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QBrush \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qbrush.h \
-		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtCore\QDebug \
 		../TooMuchFood/gameplay.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsView \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsview.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgetsglobal.h \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qtwidgets-config.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpainter.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtextoption.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qpen.h \
@@ -5367,9 +5367,12 @@ release\john.obj: ..\TooMuchFood\john.cpp ../TooMuchFood/john.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsscene.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtGui\QKeyEvent \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsRectItem \
+		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\qgraphicsitem.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsScene \
 		../TooMuchFood/movements.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsItem \
+		../TooMuchFood/john.h \
 		../TooMuchFood/score.h \
 		C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\include\QtWidgets\QGraphicsTextItem \
 		../TooMuchFood/button.h \

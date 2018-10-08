@@ -8,7 +8,7 @@
 #include <gameplay.h>
 
 
-Movements::Movements(QGraphicsItem *parent)
+Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 {
        johnsHead = new John(this);
        johnsHead->setForward(nullptr);
@@ -32,7 +32,7 @@ Movements::Movements(QGraphicsItem *parent)
 
        text = new QGraphicsTextItem(this);
        text->setVisible(true);
-       text->setPlainText("Press Space to continue");
+       text->setPlainText("Press SPACE to continue");
        text->setPos(650,250);
        text->setFont(QFont("",14));
 
@@ -41,18 +41,18 @@ Movements::Movements(QGraphicsItem *parent)
     //Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
-    if(event->key() == Qt::Key_Down && johnsHead->getDirection() != "UP"){
-       // newJohn->setY(newJohn->y()+40);
-        direction = "DOWN";
-    }else if(event->key() ==Qt::Key_Up && johnsHead->getDirection() != "DOWN"){
-       // newJohn->setY(newJohn->y()-40);
-        direction = "UP";
-    }else if(event->key() ==Qt::Key_Right && johnsHead->getDirection() != "LEFT"){
-       // newJohn->setX(newJohn->x()+40);
-        direction = "RIGHT";
-    }else if(event->key() ==Qt::Key_Left && johnsHead->getDirection() != "RIGHT"){
-      //  newJohn->setX(newJohn->x()-40);
-        direction = "LEFT";
+    if(event->key() == Qt::Key_S && johnsHead->getDirection() != "w"){
+       johnsHead->setY(johnsHead->y()+40);
+        direction = "s";
+    }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
+        johnsHead->setY(johnsHead->y()-40);
+        direction = "w";
+    }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "d"){
+        johnsHead->setX(johnsHead->x()+40);
+        direction = "d";
+    }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "a"){
+        johnsHead->setX(johnsHead->x()-80);
+        direction = "a";
     }else if(event->key() ==Qt::Key_Space){
         if(t->isActive())
         {
