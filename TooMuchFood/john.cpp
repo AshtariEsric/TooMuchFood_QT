@@ -45,16 +45,16 @@ void John::setDirection(QString value)
 void John::move()
 {
    static int first;
-    if (direction == "S")
+    if (direction == "DOWN")
     {
         this->setY(this->y()+40);
-    }else if(direction == "W")
+    }else if(direction == "UP")
     {
         this->setY(this->y()-40);
-    }else if (direction == "A")
+    }else if (direction == "LEFT")
     {
         this->setX(this->x()-40);
-    }else if(direction == "D")
+    }else if(direction == "RIGHT")
     {
         this->setX(this->x()+40);
     }
@@ -65,7 +65,7 @@ void John::move()
     }
     if(first)
     {
-        if(this->y() >= 880)
+        if(this->y()>= 880)
         {
                 this->setY(0);
             }
@@ -73,11 +73,11 @@ void John::move()
             {
                 this->setY(880);
             }
-        else if(this->x() <0)
+        else if(this->x()<0)
             {
                 this->setX(1400);
             }
-        else if(this->x() >=1400)
+        else if(this->x()>=1400)
             {
                 this->setX(0);
             }
@@ -87,26 +87,27 @@ void John::move()
     if(part == "HEAD")
     {
         checkCollidingObjects();
-        setImage();
+
     }
+    setImage();
 }
 
 void John::setImage()
 {
     if(part == "HEAD")
         {
-            if(direction == "W")
+            if(direction == "UP")
             {
-                setPixmap(QPixmap(":/images/burger/up.png").scaled(60,60));
-            }else if (direction == "S")
+                setPixmap(QPixmap(":/images/burger/up.png").scaled(40,40));
+            }else if (direction == "DOWN")
             {
-                setPixmap(QPixmap(":/images/burger/down.png").scaled(60,60));
-            }else if (direction == "A")
+                setPixmap(QPixmap(":/images/burger/down.png").scaled(40,40));
+            }else if (direction == "LEFT")
             {
-                 setPixmap(QPixmap(":/images/burger/left.png").scaled(60,60));
-            }else if (direction == "D")
+                 setPixmap(QPixmap(":/images/burger/left.png").scaled(40,40));
+            }else if (direction == "RIGHT")
             {
-                 setPixmap(QPixmap(":/images/burger/right.png").scaled(60,60,Qt::KeepAspectRatio));
+                 setPixmap(QPixmap(":/images/burger/right.png").scaled(40,40,Qt::KeepAspectRatio));
             }
             setZValue(2);
 
@@ -115,27 +116,25 @@ void John::setImage()
 void John::checkCollidingObjects()
 {
    QList <QGraphicsItem *> coll = this->collidingItems();
-    //QList erstellt einen Array mit QGraphicItems, die Variable John treffen
 
     for(int i = 0, n = coll.length(); i<n; i++)
-    {//i = 0 n = Häufigkeit der Kollisionen, solange i < n, i++
+    {
         Food *f = dynamic_cast<Food *>(coll[i]);
-        //dynamic_cast da noch nicht klar ist welcher Typ Food sein wird - Food wird in coll array geschrieben
-       if(f)
+        if(f)
         {
-            QPointF thisCenter(x()+10,y()+10);
+           //Prüfen ob Variable John, die Variable Food trifft
+
+           QPointF thisCenter(x()+10,y()+10);
             QPointF foodCenter(f->x()+10,f->y()+10);
             QLineF ln(thisCenter,foodCenter);
-            //Prüfen ob Variable John, die Variable Food trifft
+
             if(ln.length() == 0)
             {
                 //Delete Food & setScore
                 gameplay->gameScene->removeItem(f);
-                //lösche das Item (f) - Food, welches berührt wird von der gameScene
                 gameplay->score->setScore(gameplay->score->getScore()+f->score);
-                //erhöhe den Score um den (f) Wert, welcher vorab für Fries / Burger definiert wurde
                 delete f;
-                //gib den Speicher wieder frei
+
             }
         }
 

@@ -89,12 +89,12 @@ void Gameplay::start(){
     gameScene->addItem(newJohn);
     gameScene->removeItem(MenuContainer);
 
- /*   if(newJohn2)
+    if(newJohn2)
     {
         newJohn2->deleteLater();
         newJohn2 = newJohn;
     }
-*/
+
 }
 
 void Gameplay::gameOver()

@@ -13,7 +13,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
        johnsHead = new John(this);
        johnsHead->setForward(nullptr);
        johnsHead->setBackward(nullptr);
-       johnsHead->setPos(50,100);
+       johnsHead->setPos(200,200);
        johnsHead->setDirection("RIGHT");
        johnsHead->part = "HEAD";
        johnsHead->setImage();
@@ -41,18 +41,18 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
     //Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
-    if(event->key() == Qt::Key_S && johnsHead->getDirection() != "w"){
+    if(event->key() == Qt::Key_Down && johnsHead->getDirection() != "UP"){
        johnsHead->setY(johnsHead->y()+40);
-        direction = "s";
-    }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
+        direction = "DOWN";
+    }else if(event->key() ==Qt::Key_Up && johnsHead->getDirection() != "DOWN"){
         johnsHead->setY(johnsHead->y()-40);
-        direction = "w";
-    }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "d"){
+        direction = "UP";
+    }else if(event->key() ==Qt::Key_Right && johnsHead->getDirection() != "LEFT"){
         johnsHead->setX(johnsHead->x()+40);
-        direction = "d";
-    }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "a"){
+        direction = "RIGHT";
+    }else if(event->key() ==Qt::Key_Left && johnsHead->getDirection() != "RIGHT"){
         johnsHead->setX(johnsHead->x()-80);
-        direction = "a";
+        direction = "LEFT";
     }else if(event->key() ==Qt::Key_Space){
         if(t->isActive())
         {
@@ -81,7 +81,6 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
                rect->setRect(j*40,i*40,40,40);
            }
         }
-
     }
 
     void Movements::move()
@@ -107,14 +106,14 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 
 void Movements::movementsJohn()
 {
-    /*John* temp;
+    John* temp;
 
     while(temp!=nullptr)
     {
         temp->move();
         temp = temp->getForward();
     }
-    */
+
 
 }
 
