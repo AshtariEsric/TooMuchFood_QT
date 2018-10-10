@@ -26,9 +26,10 @@ void MainWindow::on_btn_end_clicked()
 
 void MainWindow::on_btn_highscore_clicked()
 {
-    Highscore highscore;
+   /* Highscore highscore;
     highscore.setModal(true);
     highscore.exec();
+    */
 }
 
 void MainWindow::on_btn_start_clicked()

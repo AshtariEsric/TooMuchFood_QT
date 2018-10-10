@@ -4,11 +4,13 @@
 #include "gameplay.h"
 #include "food.h"
 #include "john.h"
+#include "poo.h"
 
-Gameplay *gameplay;
-
-John::John(QGraphicsItem *parent):QGraphicsPixmapItem(parent)
+/// Repeat
+John::John(Gameplay* newGame, QGraphicsItem *parent):QGraphicsPixmapItem(parent)
 {
+    game = newGame;
+
     setZValue(1);
 }
 
@@ -119,11 +121,14 @@ void John::checkCollidingObjects()
 {
    QList <QGraphicsItem *> coll = this->collidingItems();
 
-    for(int i = 0, n = coll.length(); i<n; i++)
+   int  n = coll.length();
+
+    for(int i = 0; i<n; i++)
     {
         Food *F = dynamic_cast<Food *>(coll[i]);
         if(F)
         {
+           qWarning() << "Found food " << i;
            //Prüfen ob Variable John, die Variable Food trifft
 
            QPointF thisCenter(x(),y());
@@ -133,23 +138,31 @@ void John::checkCollidingObjects()
             if(ln.length() < 10)
             {
                 //Delete Food & setScore
-                gameplay->gameScene->removeItem(F);
+                auto pscore= game->score;
+                pscore->setScore( pscore->getScore()+F->score );
+                game->gameScene->removeItem(F);
                 delete F;
-                gameplay->score->setScore(gameplay->score->getScore()+F->score);
 
             }
         }
 
        //else if kontrolliert wann John "sich selber" trifft. Dann ist das Spiel zuende - muss abgeändert werden auf wenn John "poo" trifft.
-           /* else if(coll[i])
+            else if(coll[i])
         {
-            if(typeid(* coll[i])==typeid(pooh))
-            {
-                gameplay->gameOver();
-                return;
-            }
-        }*/
-}
-}
+            poo *p = dynamic_cast<poo *>(coll[i]);
+            if(p)
 
+            {
+                QPointF thisCenter(x(),y());
+                 QPointF pooCenter(p->x(),p->y());
+                 QLineF ln(thisCenter,pooCenter);
+
+                 if(ln.length() < 10)
+                 {
+                    game->gameOver();
+                    return;
+            }
+        }
+}}
+}
 

@@ -3,12 +3,14 @@
 
 #include <QGraphicsRectItem>
 
+class Gameplay;
 
 class John: public QGraphicsPixmapItem
 {
 public:
 
-    John(QGraphicsItem * parent = nullptr);
+    //methode == speichert nichts, tut etwas
+    John(Gameplay* newGame, QGraphicsItem * parent = nullptr);
 
     John *getForward();
     void setForward(John *value);
@@ -29,9 +31,11 @@ public:
     void pooh(QGraphicsItem *parent = nullptr);
 
 private:
+    // member == datentypen, speichert dinge, kann nichts
     John *forward = nullptr;
     John *backward = nullptr;
     QString direction = nullptr;
+    Gameplay* game = nullptr;
 
 };
 

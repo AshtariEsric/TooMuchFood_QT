@@ -1,4 +1,4 @@
-#ifndef HIGHSCORE_H
+/*#ifndef HIGHSCORE_H
 #define HIGHSCORE_H
 
 #include <QDialog>
@@ -19,5 +19,5 @@ public:
 private:
     Ui::Highscore *ui;
 };
+*/
 
-#endif // HIGHSCORE_H

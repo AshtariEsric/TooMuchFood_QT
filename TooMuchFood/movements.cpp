@@ -5,22 +5,22 @@
 #include <QGraphicsRectItem>
 #include "john.h"
 #include "food.h"
-#include <gameplay.h>
 #include "poo.h"
 
-Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
+Movements::Movements(Gameplay* zweiteEtage, QGraphicsItem *parent):QGraphicsRectItem (parent)
 {
-       johnsHead = new John(this);
+       johnsHead = new John(zweiteEtage,this);
        johnsHead->setForward(nullptr);
        johnsHead->setBackward(nullptr);
        johnsHead->setPos(200,200);
        johnsHead->setDirection("d");
        johnsHead->part = "HEAD";
        johnsHead->setImage();
-       johnsBody = johnsHead;
 
-       t = new QTimer();
-       connect(t,SIGNAL(timeout()),this,SLOT(move));
+       johnsBody = nullptr;
+
+//       t = new QTimer();
+//       connect(t,SIGNAL(timeout()),this,SLOT(move));
 
        burgerSpawn = new QTimer();
         connect(burgerSpawn, SIGNAL(timeout()),this,SLOT(makeFood()));
@@ -44,44 +44,44 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
     //Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
-    if(event->key() == Qt::Key_S && johnsHead->getDirection() != "w"){
-       johnsHead->setY(johnsHead->y()+40);
-        direction = "s";
-        johnsHead->setDirection(direction);
-        johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/down.png").scaled(60,60));
-
-    }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
-        johnsHead->setY(johnsHead->y()-40);
-        direction = "w";
-        johnsHead->setDirection(direction);
-        johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/up.png").scaled(60,60));
-    }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "a"){
-        johnsHead->setX(johnsHead->x()+40);
-        direction = "d";
-        johnsHead->setDirection(direction);
-        johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/right.png").scaled(60,60));
-    }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "d"){
-       johnsHead->setX(johnsHead->x()-40);
-        direction = "a";
-        johnsHead->setDirection(direction);
-        johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/left.png").scaled(60,60));
-    }else if(event->key() ==Qt::Key_Space){
-        if(t->isActive())
-        {
-            burgerSpawn->stop();
-            frieSpawn->stop();
-            t->stop();
-            text->setVisible(true);
+        if(event->key() == Qt::Key_S && johnsHead->getDirection() != "w"){
+//           johnsHead->setY(johnsHead->y()+40);
+            direction = "s";
+            johnsHead->setDirection(direction);
+            johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/down.png").scaled(60,60));
+        }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
+//            johnsHead->setY(johnsHead->y()-40);
+            direction = "w";
+            johnsHead->setDirection(direction);
+            johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/up.png").scaled(60,60));
+        }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "a"){
+//            johnsHead->setX(johnsHead->x()+40);
+            direction = "d";
+            johnsHead->setDirection(direction);
+            johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/right.png").scaled(60,60));
+        }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "d"){
+//           johnsHead->setX(johnsHead->x()-40);
+            direction = "a";
+            johnsHead->setDirection(direction);
+            johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/left.png").scaled(60,60));
+        }else if(event->key() ==Qt::Key_Space){
+            if(!text->isVisible())
+            {
+                burgerSpawn->stop();
+                frieSpawn->stop();
+                // t->stop();
+                text->setVisible(true);
+            }
+            else
+            {
+                burgerSpawn->start(6000);
+                frieSpawn->start(4000);
+                pooSpawn->start(12000);
+                // t->start(90);
+                text->setVisible(false);
+            }
         }
-        else
-        {
-            burgerSpawn->start(6000);
-            frieSpawn->start(4000);
-            pooSpawn->start(12000);
-            t->start(90);
-            text->setVisible(false);
-        }
-    }
+        johnsHead->move();
     }
 
     void Movements::makeBoard()

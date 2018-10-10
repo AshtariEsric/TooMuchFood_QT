@@ -76,12 +76,11 @@ void Gameplay::displayMainMenu(QString , QString play)
     int qyPos = 350;
     quitButton->setPos(qxPos,qyPos);
     connect(quitButton, SIGNAL(clicked()),this,SLOT(close()));
-
 }
 
-void Gameplay::start(){
 
-    newJohn = new Movements();
+void Gameplay::start(){
+    newJohn = new Movements(this);
     newJohn->setFlag(QGraphicsItem::ItemIsFocusable);
     newJohn->setFocus();
     score->setVisible(true);

@@ -1,4 +1,4 @@
-#include "highscore.h"
+/*#include "highscore.h"
 #include "ui_highscore.h"
 
 //Deactivated
@@ -13,6 +13,6 @@ Highscore::Highscore(QWidget *parent) :
 Highscore::~Highscore()
 {
     delete ui;
-}
+}*/
 
 
