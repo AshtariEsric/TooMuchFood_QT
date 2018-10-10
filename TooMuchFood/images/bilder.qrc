@@ -8,5 +8,4 @@
         <file>left.png</file>
         <file>right.png</file>
     </qresource>
-    <qresource prefix="/"/>
 </RCC>

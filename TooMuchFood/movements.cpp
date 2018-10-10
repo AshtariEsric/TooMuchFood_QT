@@ -14,7 +14,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
        johnsHead->setForward(nullptr);
        johnsHead->setBackward(nullptr);
        johnsHead->setPos(200,200);
-       johnsHead->setDirection("RIGHT");
+       johnsHead->setDirection("d");
        johnsHead->part = "HEAD";
        johnsHead->setImage();
        johnsBody = johnsHead;
@@ -28,7 +28,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
        frieSpawn = new QTimer();
        connect(frieSpawn,SIGNAL(timeout()),this,SLOT(makeFood2()));
 
-       direction = "RIGHT";
+       direction = "d";
 
        text = new QGraphicsTextItem(this);
        text->setVisible(true);
@@ -41,18 +41,24 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
     //Keyboard movement action
     void Movements::keyPressEvent(QKeyEvent *event)
     {
-    if(event->key() == Qt::Key_Down && johnsHead->getDirection() != "UP"){
+    if(event->key() == Qt::Key_S && johnsHead->getDirection() != "w"){
        johnsHead->setY(johnsHead->y()+40);
-        direction = "DOWN";
-    }else if(event->key() ==Qt::Key_Up && johnsHead->getDirection() != "DOWN"){
+        direction = "s";
+        johnsHead->setDirection(direction);
+        //Image Change während des keyPressEvents?!
+
+    }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
         johnsHead->setY(johnsHead->y()-40);
-        direction = "UP";
-    }else if(event->key() ==Qt::Key_Right && johnsHead->getDirection() != "LEFT"){
+        direction = "w";
+        johnsHead->setDirection(direction);
+    }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "a"){
         johnsHead->setX(johnsHead->x()+40);
-        direction = "RIGHT";
-    }else if(event->key() ==Qt::Key_Left && johnsHead->getDirection() != "RIGHT"){
-        johnsHead->setX(johnsHead->x()-80);
-        direction = "LEFT";
+        direction = "d";
+        johnsHead->setDirection(direction);
+    }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "d"){
+       johnsHead->setX(johnsHead->x()-40);
+        direction = "a";
+        johnsHead->setDirection(direction);
     }else if(event->key() ==Qt::Key_Space){
         if(t->isActive())
         {
@@ -106,7 +112,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 
 void Movements::movementsJohn()
 {
-    John* temp;
+    John* temp = johnsBody;
 
     while(temp!=nullptr)
     {
