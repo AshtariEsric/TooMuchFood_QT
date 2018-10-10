@@ -49,21 +49,25 @@ Movements::Movements(Gameplay* zweiteEtage, QGraphicsItem *parent):QGraphicsRect
             direction = "s";
             johnsHead->setDirection(direction);
             johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/down.png").scaled(60,60));
+            johnsHead->move();
         }else if(event->key() ==Qt::Key_W && johnsHead->getDirection() != "s"){
 //            johnsHead->setY(johnsHead->y()-40);
             direction = "w";
             johnsHead->setDirection(direction);
             johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/up.png").scaled(60,60));
+            johnsHead->move();
         }else if(event->key() ==Qt::Key_D && johnsHead->getDirection() != "a"){
 //            johnsHead->setX(johnsHead->x()+40);
             direction = "d";
             johnsHead->setDirection(direction);
             johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/right.png").scaled(60,60));
+            johnsHead->move();
         }else if(event->key() ==Qt::Key_A && johnsHead->getDirection() != "d"){
 //           johnsHead->setX(johnsHead->x()-40);
             direction = "a";
             johnsHead->setDirection(direction);
             johnsHead->QGraphicsPixmapItem::setPixmap(QPixmap(":/images/burger/left.png").scaled(60,60));
+            johnsHead->move();
         }else if(event->key() ==Qt::Key_Space){
             if(!text->isVisible())
             {
@@ -81,7 +85,6 @@ Movements::Movements(Gameplay* zweiteEtage, QGraphicsItem *parent):QGraphicsRect
                 text->setVisible(false);
             }
         }
-        johnsHead->move();
     }
 
     void Movements::makeBoard()
