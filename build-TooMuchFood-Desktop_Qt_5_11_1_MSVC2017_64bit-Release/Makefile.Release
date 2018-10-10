@@ -287,7 +287,9 @@ release\qrc_bilder.cpp: ..\TooMuchFood\images\bilder.qrc \
 		..\TooMuchFood\images\down.png \
 		..\TooMuchFood\images\fries.png \
 		..\TooMuchFood\images\burger.png \
-		..\TooMuchFood\images\bg.png
+		..\TooMuchFood\images\right.png \
+		..\TooMuchFood\images\bg.png \
+		..\TooMuchFood\images\left.png
 	"C:\ProgramFiles(x86)\QT\5.11.1\msvc2017_64\bin\rcc.exe" -name bilder ..\TooMuchFood\images\bilder.qrc -o release\qrc_bilder.cpp
 
 compiler_qmlcache_make_all:

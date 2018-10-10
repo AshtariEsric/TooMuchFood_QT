@@ -125,34 +125,34 @@ void John::checkCollidingObjects()
 
     for(int i = 0, n = coll.length(); i<n; i++)
     {
-        Food *f = dynamic_cast<Food *>(coll[i]);
-        if(f)
+        Food *F = dynamic_cast<Food *>(coll[i]);
+        if(F)
         {
            //Prüfen ob Variable John, die Variable Food trifft
 
-           QPointF thisCenter(x()+10,y()+10);
-            QPointF foodCenter(f->x()+10,f->y()+10);
+           QPointF thisCenter(x(),y());
+            QPointF foodCenter(F->x(),F->y());
             QLineF ln(thisCenter,foodCenter);
 
             if(ln.length() < 10)
             {
                 //Delete Food & setScore
-                gameplay->gameScene->removeItem(f);
-                gameplay->score->setScore(gameplay->score->getScore()+f->score);
-                delete f;
+                gameplay->gameScene->removeItem(F);
+                delete F;
+                gameplay->score->setScore(gameplay->score->getScore()+F->score);
 
             }
         }
 
        //else if kontrolliert wann John "sich selber" trifft. Dann ist das Spiel zuende - muss abgeändert werden auf wenn John "poo" trifft.
-            else if(coll[i])
+           /* else if(coll[i])
         {
-            if(typeid(* coll[i])==typeid(John))
+            if(typeid(* coll[i])==typeid(pooh))
             {
                 gameplay->gameOver();
                 return;
             }
-        }
+        }*/
 }
 }
 

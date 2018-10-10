@@ -25,6 +25,9 @@ public:
     QString part = nullptr;
     void setImage();
 
+    //Pooh deklaration
+    void pooh(QGraphicsItem *parent = nullptr);
+
 private:
     John *forward = nullptr;
     John *backward = nullptr;

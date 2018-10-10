@@ -102,15 +102,19 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 
     void Movements::makeFood()
     {
-        Food*f1= new Food(this, "BURGER");
-        f1->setX(qrand()%(1400/40)*40);
-        f1->setY(qrand() % (880/40)*40);
+        Food *F= new Food(this, "BURGER");
+        F->setX(qrand()%(1400/40)*40);
+        F->setY(qrand() % (880/40)*40);
+
+
     }
 
-    void Movements::makeFood2(){
-        Food*f1 = new Food(this, "FRIES");
-        f1->setX(qrand()%(1400/40)*40);
-        f1->setY(qrand() % (880/40)*40);
+    void Movements::makeFood2()
+    {
+        Food*F = new Food(this, "FRIES");
+        F->setX(qrand()%(1400/40)*40);
+        F->setY(qrand() % (880/40)*40);
+
     }
 
 void Movements::movementsJohn()
@@ -122,7 +126,5 @@ void Movements::movementsJohn()
         temp->move();
         temp = temp->getForward();
     }
-
-
 }
 

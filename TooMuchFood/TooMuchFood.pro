@@ -51,7 +51,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     movements.cpp \
-    score.cpp
+    score.cpp \
+    poo.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -80,7 +81,8 @@ HEADERS += \
     john.h \
     mainwindow.h \
     movements.h \
-    score.h
+    score.h \
+    poo.h
 
 FORMS += \
         mainwindow.ui \

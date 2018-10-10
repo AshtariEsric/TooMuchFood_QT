@@ -7,7 +7,7 @@
 class Food : public QGraphicsPixmapItem
 {
 public:
-    Food(QGraphicsItem *parent = 0, QString name = "");
+    Food(QGraphicsItem *parent = nullptr, QString name = "");
     int score;
 
 };
