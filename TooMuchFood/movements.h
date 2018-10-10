@@ -19,6 +19,7 @@ public slots:
    void move();
    void makeFood();
    void makeFood2();
+   void makePoo();
 
 private:
    John *johnsHead = nullptr;
@@ -27,6 +28,7 @@ private:
    QTimer *t = nullptr;
    QTimer *burgerSpawn = nullptr;
    QTimer *frieSpawn = nullptr;
+   QTimer *pooSpawn = nullptr;
    QGraphicsTextItem *text = nullptr;
 
 

@@ -23,7 +23,7 @@ Gameplay::Gameplay(QWidget *parent):QGraphicsView(parent)
     score = new Score();
     gameScene->addItem(score);
     newJohn = nullptr;
-    newJohn2 = nullptr;
+
 
 
 

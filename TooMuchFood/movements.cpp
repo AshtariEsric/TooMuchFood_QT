@@ -6,7 +6,7 @@
 #include "john.h"
 #include "food.h"
 #include <gameplay.h>
-
+#include "poo.h"
 
 Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 {
@@ -27,6 +27,9 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
 
        frieSpawn = new QTimer();
        connect(frieSpawn,SIGNAL(timeout()),this,SLOT(makeFood2()));
+
+       pooSpawn = new QTimer();
+        connect(pooSpawn, SIGNAL(timeout()),this,SLOT(makePoo()));
 
        direction = "d";
 
@@ -74,6 +77,7 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
         {
             burgerSpawn->start(6000);
             frieSpawn->start(4000);
+            pooSpawn->start(12000);
             t->start(90);
             text->setVisible(false);
         }
@@ -106,7 +110,6 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
         F->setX(qrand()%(1400/40)*40);
         F->setY(qrand() % (880/40)*40);
 
-
     }
 
     void Movements::makeFood2()
@@ -116,6 +119,15 @@ Movements::Movements(QGraphicsItem *parent):QGraphicsRectItem (parent)
         F->setY(qrand() % (880/40)*40);
 
     }
+
+   void Movements::makePoo()
+    {
+        poo *p = new poo(this, "KACKHAUFEN");
+        p->setX(qrand()%(1400/40)*40);
+        p->setY(qrand() % (880/40)*40);
+
+    }
+
 
 void Movements::movementsJohn()
 {

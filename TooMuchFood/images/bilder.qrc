@@ -7,5 +7,6 @@
         <file>up.png</file>
         <file>left.png</file>
         <file>right.png</file>
+        <file>vogelschiss.png</file>
     </qresource>
 </RCC>

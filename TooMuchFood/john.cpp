@@ -91,10 +91,6 @@ void John::move()
         checkCollidingObjects();
         setImage();
     }
-
-
-
-
 }
 
 void John::setImage()
